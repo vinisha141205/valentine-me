@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Dating Profile</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #b32b58;
+            text-align: center;
+            padding: 15px;
+            overflow: hidden;
+        }
+        .profile-card {
+            background: rgb(255, 197, 196);
+            width: 800px;
+            margin: auto;
+            padding: 30px;
+            border-radius: 30px;
+            box-shadow: 20px 20px 20px rgba(1, 1, 1, 0.2);
+        }
+      
+        .profile-pic {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #e05368;
+        }
+        h2 {
+            color: #a3253a;
+        }
+        p {
+            font-size: 16px;
+            color: #3d1b1b;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 10px;
+            background-color: #dd435a;
+            color: rgb(246, 204, 204);
+            text-decoration: none;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .btn:hover {
+            background-color: #e67c8e;
+            transform: scale(1.1);
+        }
+        .song-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .song {
+            background: #d86558;
+            padding: 10px;
+            border-radius: 10px;
+            transition: transform 0.3s ease-in-out;
+        }
+        .song:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 10px rgba(221, 85, 112, 0.5);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="profile-card" id="card">
+        <img src=".vscode/image1.jpeg" alt="Profile Picture" class="profile-pic">
+        <h2>Vinisha Kumari</h2>
+        <p>💡 Problem Solver - I will solve all your life problems </p>
+        <p>❤ Coffee Enthusiast</p>
+        <div class="Dream Date">
+            <h3>Dream Date</h3>
+            <p>💑 "A cozy coding session, debugging life over coffee, and stargazing while discussing sci-fi theories."</p>
+        </div>
+        <div class="quotes">
+            <h3>Favorite Quote</h3>
+            <p class="animated-text">"Relationships are like Git commits: always commit but never push too fast!"</p>
+        </div>
+        <div>
+            <h3>My Ideal Partner Should Have</h3>
+            <p>✅ Front-End: Good sense of humor, sweet personality, enjoys late-night coding sessions & great communication</p>
+            <p>✅ Back-End: Trust & loyalty</p>
+            <p>✅ Database: Strong emotional connection, can understand my sarcastic comments</p>
+        </div>
+        <div class="playlist">
+            <h3>🎶 My Dream Valentine's Day Playlist 💖</h3>
+            <div class="song-list">
+                <div class="song">
+                    <p>🎵 Perfect – Ed Sheeran</p>
+                    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/0tgVpDi06FyKpA1z0VMD4v" 
+                    width="80%" height="80" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+                </div>
+                <div class="song">
+                    <p>🎵 Just the Way You Are – Bruno Mars</p>
+                    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/7BqBn9nzAq8spo5e7cZ0dJ" 
+                    width="80%" height="80" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+                </div>
+                <div class="song">
+                    <p>🎵 Thinking Out Loud – Ed Sheeran</p>
+                    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/1Slwb6dOYkBlWal1PGtnNg" 
+                    width="80%" height="80" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+                </div>
+            </div>
+        </div>
+        <div>
+            <h3>Skills & Tech Stack</h3>
+            <p>💻 Debugging Love Life</p>
+            <h3>Fun Facts</h3>
+            <p>☕ Runs on coffee and dreams of perfect UI</p>
+            <h3>Love Language (Coder Edition)</h3>
+            <p><code>console.log("Acts of Service & Quality Time ❤")</code></p>
+            <h4>Looking for someone to debug life with! 💖</h4>
+        </div>
+        <a href="#" class="btn">Let's Connect 💌</a>
+    </div>
+
+</body>
+</html>
