@@ -3,89 +3,162 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Dating Profile</title>
+        <title>My Dating Profile</title>
     <style>
+        #bg-image {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+    }
         body {
             font-family: Arial, sans-serif;
             background-color: #b32b58;
             text-align: center;
             padding: 15px;
-            overflow: hidden;
+            overflow-x: hidden;
+            overflow-y: auto;
         }
+        html {
+    scroll-behavior: smooth;
+}
+        @keyframes float {
+    0% { transform: translateY(-100vh) rotate(0deg); opacity: 1; }
+    50% { opacity: 1; }
+     100% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+}
+.heart {
+    position: absolute;
+    color: rgb(220, 85, 107);
+    top: 0;
+    font-size: 50px; /* Adjust size */
+    animation: float 2s linear infinite;
+    z-index: -1;
+}
         .profile-card {
-            background: rgb(255, 197, 196);
-            width: 800px;
+            background: rgba(252, 183, 182, 0.419);
+             width:900px;
             margin: auto;
             padding: 30px;
             border-radius: 30px;
             box-shadow: 20px 20px 20px rgba(1, 1, 1, 0.2);
         }
-      
         .profile-pic {
-            width: 120px;
-            height: 120px;
+            width: 150px;
+            height: 150px;
             border-radius: 50%;
             object-fit: cover;
-            border: 5px solid #e05368;
+            border: 3px solid #aa293c;
         }
-        h2 {
-            color: #a3253a;
+        h1 {
+            color: #b51e37;
         }
         p {
             font-size: 16px;
-            color: #3d1b1b;
+            color: #0e0d0d;
         }
         .btn {
             display: inline-block;
             padding: 10px 20px;
             margin-top: 10px;
-            background-color: #dd435a;
-            color: rgb(246, 204, 204);
+            background-color: #ea445d;
+            color: rgb(255, 250, 250);
             text-decoration: none;
             border-radius: 5px;
             transition: 0.3s;
         }
         .btn:hover {
-            background-color: #e67c8e;
-            transform: scale(1.1);
-        }
+            background-color: #dd6f81;
+    animation: pulse 0.5s infinite alternate;
+}
+@keyframes pulse {
+    from { transform: scale(1); }
+    to { transform: scale(1.1); }
+}
         .song-list {
             display: flex;
             flex-direction: column;
-            gap: 15px;
+         gap: 15px;
         }
         .song {
-            background: #d86558;
-            padding: 10px;
-            border-radius: 10px;
+            background: #ff92928f;
+            padding: 3px;
+            border-radius: 20px;
             transition: transform 0.3s ease-in-out;
         }
         .song:hover {
             transform: scale(1.05);
-            box-shadow: 0 0 10px rgba(221, 85, 112, 0.5);
+            box-shadow: 0 0 20px rgba(221, 85, 112, 0.5);
+        }
+        .note-container {
+            background: rgba(255, 225, 225, 0.8);
+            padding: 15px;
+            border-radius: 15px;
+            margin-top: 20px;
+            text-align: center;
+        }
+        .note-container textarea {
+            width: 90%;
+            height: 80px;
+            padding: 10px;
+            border-radius: 10px;
+            border: 2px solid #dd435a;
+            font-size: 16px;
+            resize: none;
+        }
+        .message-box {
+            margin-top: 15px;
+            padding: 10px;
+            border-radius: 10px;
+            background: #ffdde2;
+            display: none;
         }
     </style>
 </head>
 <body>
-
+    <img id="bg-image" src="https://i.pinimg.com/736x/1a/67/a9/1a67a9706aa60d5b3f8ebf4cb2d94cfc.jpg" alt="Background Image">
     <div class="profile-card" id="card">
-        <img src=".vscode/image1.jpeg" alt="Profile Picture" class="profile-pic">
-        <h2>Vinisha Kumari</h2>
-        <p>💡 Problem Solver - I will solve all your life problems </p>
-        <p>❤ Coffee Enthusiast</p>
-        <div class="Dream Date">
-            <h3>Dream Date</h3>
-            <p>💑 "A cozy coding session, debugging life over coffee, and stargazing while discussing sci-fi theories."</p>
-        </div>
-        <div class="quotes">
-            <h3>Favorite Quote</h3>
-            <p class="animated-text">"Relationships are like Git commits: always commit but never push too fast!"</p>
-        </div>
+        <img src="https://i.pinimg.com/736x/af/e0/e1/afe0e1c63abb29a34828d6b3691872b7.jpg" alt="Profile Picture" class="profile-pic">
+        <h1>VINISHA </h1>
+        <script>
+            function createHeart() {
+                const heart = document.createElement("div");
+                heart.classList.add("heart");
+                heart.innerHTML = " 🩷 "; 
+                document.body.appendChild(heart);
+                heart.style.left = Math.random() *100 + "vw";
+                const duration = Math.random() * 2 + 5;
+                heart.style.animation = `float ${duration}s linear infinite`;
+                setTimeout(() => {
+                    heart.remove();
+                }, duration * 1000);
+            }
+            setInterval(createHeart, 550);
+        </script>
+       <h3> About Me</h3>
+     <p>💝I’m a hopeless romantic who finds beauty in the little things—handwritten notes, stolen glances, and songs that say what words can’t.
+        My heart beats in poetry, and my playlist is always on shuffle, because life is just better with music.</p>
+     <p>🎀I love the warmth of fresh flowers on my desk, the comfort of cozy nights in, and deep conversations that stretch into the early hours. 
+         Good food, great company, and lazy Sundays make my world go round.
+     <p>💭I overthink everything  but fall for the simple moments—laughing until my stomach hurts, getting lost in a good book, or feeling the rain on my skin. If you can make me smile,
+          challenge my mind, and aren’t afraid to dance in the rain, we just might be a perfect match.
+          <h3>If My Life Was A Movie......</h3>
+          <ul>
+            <p>🎬 TITLE: "Ctrl + Z: The Movie" (Because I wish life had an undo button)</p>
+            <p>📽️TAGLINE: One awkward moment at a time.</p>
+              <p>🎭 GENRE:   Romantic Comedy with a sprinkle of chaos</p>
+              <p>🌟 MAIN CHARACTER ENERGY: Staring at their phone, debating whether to text first but loves deep convos.</p>
+              <p>🎶 SOUND TRACK:   A mix of indie, throwbacks, and guilty pleasure pop</p>
+              <p>🍿 PLOT TWIST:    You’ll have to find out 😉</p>
+           </ul>
         <div>
             <h3>My Ideal Partner Should Have</h3>
             <p>✅ Front-End: Good sense of humor, sweet personality, enjoys late-night coding sessions & great communication</p>
-            <p>✅ Back-End: Trust & loyalty</p>
-            <p>✅ Database: Strong emotional connection, can understand my sarcastic comments</p>
+            <p>✅ Back-End: Trust , loyalty & deep convos.</p>
+            <p>✅ Database: Strong emotional connection, can understand my sarcastic comments and can handle my kaleshi mood swing.</p>
         </div>
         <div class="playlist">
             <h3>🎶 My Dream Valentine's Day Playlist 💖</h3>
@@ -96,28 +169,101 @@
                     width="80%" height="80" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
                 </div>
                 <div class="song">
-                    <p>🎵 Just the Way You Are – Bruno Mars</p>
-                    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/7BqBn9nzAq8spo5e7cZ0dJ" 
-                    width="80%" height="80" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
-                </div>
+                    <p>🎵 I Wanna Be Yours – Arctic Monkeys</p>
+                    <iframe style="border-radius:12px" 
+                        src="https://open.spotify.com/embed/track/5XeFesFbtLpXzIVDNQP22n" 
+                        width="80%" height="80" frameborder="0" 
+                        allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+                    </iframe>   
+                 </div>
                 <div class="song">
-                    <p>🎵 Thinking Out Loud – Ed Sheeran</p>
-                    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/1Slwb6dOYkBlWal1PGtnNg" 
-                    width="80%" height="80" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+                    <p>🎵 Lover – Taylor Swift</p>
+                    <iframe style="border-radius:12px" 
+                        src="https://open.spotify.com/embed/track/1dGr1c8CrMLDpV6mPbImSI" 
+                        width="80%" height="80" frameborder="0" 
+                        allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+                    </iframe>  
                 </div>
             </div>
+            <h3>Favorite Quotes</h3>
+            <div class="animated-text">
+                <p>"Relationships are like Git commits: always commit but never push too fast!"</p>
+            <p>"Love is like recursion—sometimes confusing, but ultimately beautiful."</p>
         </div>
-        <div>
-            <h3>Skills & Tech Stack</h3>
-            <p>💻 Debugging Love Life</p>
-            <h3>Fun Facts</h3>
-            <p>☕ Runs on coffee and dreams of perfect UI</p>
-            <h3>Love Language (Coder Edition)</h3>
-            <p><code>console.log("Acts of Service & Quality Time ❤")</code></p>
-            <h4>Looking for someone to debug life with! 💖</h4>
+            <div class="note-container">
+                <h3>💌 Send Me a Secret Note</h3>
+                <textarea id="secretMessage" placeholder="Write something sweet..."></textarea>
+                <button class="btn" onclick="sendMessage()">Send 💌</button>
+    
+                <div class="message-box" id="messageBox">
+                    <h4>💖 Your Secret Note 💖</h4>
+                       <p id="displayNote"></p>
+                    <button class="btn" onclick="clearMessage()">Delete</button>
+                </div>
+            </div>
+        <script>
+            function sendMessage() {
+                let message = document.getElementById("secretMessage").value;
+                if (message.trim() !== "") {
+                    localStorage.setItem("secretNote", message);
+                    document.getElementById("displayNote").innerText = message;
+                    document.getElementById("messageBox").style.display = "block";
+                    document.getElementById("secretMessage").value = "";
+                }
+            }
+            function clearMessage() {
+                localStorage.removeItem("secretNote");
+                document.getElementById("messageBox").style.display = "none";
+            }
+            window.onload = function() {
+                let savedNote = localStorage.getItem("secretNote");
+                if (savedNote) {
+                    alert("Someone left you a secret note: " + savedNote);
+                }
+            };
+            </script> 
         </div>
-        <a href="#" class="btn">Let's Connect 💌</a>
+        <a href="#" class="btn" id="connect-btn">Let's Connect 💌</a>
+ <!-- 
+Hey there, fellow code explorer! 👀  
+You either:  
+1️⃣ Are genuinely curious about my skills (flattered, honestly 😏).  
+2️⃣ Got lost in the code and now you’re just vibing here.  
+3️⃣ Are secretly judging my indentation (please, have mercy).  
+Either way, you’re my kind of person. Let’s chat—about tech, life, or why semicolons are a necessary evil. 💻🔥  
+ If you reply to this… I’ll know you’re really cool Or just really bored.
+  Either way, I respect it. 😆 
+-->
+        <style>
+            .firework {
+                position: fixed;
+                font-size: 40px;
+                  animation: explode 1.5s linear forwards;
+            }
+            @keyframes explode {
+                0% { opacity: 1; transform: scale(1); }
+                50% { opacity: 1; transform: scale(1.5); }
+                100% { opacity: 0; transform: scale(2); }
+            }
+        </style>
+        <script>
+            function createFirework() {
+                const firework = document.createElement("div");
+                firework.classList.add("firework");
+                firework.innerHTML = ["💘"];
+                firework.style.left = Math.random() * 100 + "vw";
+                firework.style.top = Math.random() * 100 + "vh";
+                document.body.appendChild(firework);
+        
+                setTimeout(() => { firework.remove(); }, 1500);
+            }
+            document.getElementById("connect-btn").addEventListener("click", (e) => {
+                e.preventDefault();
+                for (let i = 0; i < 10; i++) {
+                    setTimeout(createFirework, i * 200);
+                }
+            });
+        </script>
     </div>
-
 </body>
 </html>
