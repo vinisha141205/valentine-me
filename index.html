@@ -3,8 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>My Dating Profile</title>
+         <!-- If this breaks, it's your fault, not mine -->
+        <!-- WARNING: Opening this file may cause frustration -->
+   <title>My Dating Profile</title>
+    <!-- Don’t judge me, I was under deadline pressure -->
     <style>
+        /* CSS: Because HTML alone is just sad */
         #bg-image {
         position: fixed;
         top: 0;
@@ -25,6 +29,7 @@
         html {
     scroll-behavior: smooth;
 }
+        /* If you can read this, send help */
         @keyframes float {
     0% { transform: translateY(-100vh) rotate(0deg); opacity: 1; }
     50% { opacity: 1; }
@@ -34,7 +39,7 @@
     position: absolute;
     color: rgb(220, 85, 107);
     top: 0;
-    font-size: 50px; /* Adjust size */
+    font-size: 50px; 
     animation: float 2s linear infinite;
     z-index: -1;
 }
@@ -53,6 +58,16 @@
             object-fit: cover;
             border: 3px solid #aa293c;
         }
+         .colorful-name {
+    font-size: 30px;
+    font-weight: bold;
+    animation: colorChange 3s infinite alternate;
+}
+@keyframes colorChange {
+    0% { color: #f37998; }  
+    50% { color: #d74e75; }  
+    100% { color: #9b2424; }
+}
         h1 {
             color: #b51e37;
         }
@@ -60,6 +75,7 @@
             font-size: 16px;
             color: #0e0d0d;
         }
+          /* I had a good reason for this. I just don’t remember it. */
         .btn {
             display: inline-block;
             padding: 10px 20px;
@@ -73,6 +89,32 @@
         .btn:hover {
             background-color: #dd6f81;
     animation: pulse 0.5s infinite alternate;
+}
+        .typing-text {
+    font-size: 19px;
+    font-weight: bold;
+    font-family: 'Courier New', monospace;
+    color: #ff3366;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 0;
+    border-right: 3px solid #ff3366;
+    animation: typing 4s steps(40) forwards, blink 0.8s infinite;
+}
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+@keyframes blink {
+    50% { border-color: transparent; }
+}
+@keyframes restart {
+    0% { width: 0; }
+    50% { width: 100%; }
+    100% { width: 0; }
+}
+.typing-text.loop {
+    animation: restart 6s steps(40) infinite, blink 0.8s infinite;
 }
 @keyframes pulse {
     from { transform: scale(1); }
@@ -118,11 +160,15 @@
         }
     </style>
 </head>
+    <!-- 404 ERROR: Brain not found -->
 <body>
     <img id="bg-image" src="./bg.jpg" alt="Background Image">
     <div class="profile-card" id="card">
         <img src="https://i.pinimg.com/736x/af/e0/e1/afe0e1c63abb29a34828d6b3691872b7.jpg" alt="Profile Picture" class="profile-pic">
-        <h1>VINISHA </h1>
+      <h1 class="colorful-name">VINISHA</h1>
+         <div class="typing-container">
+            <p class="typing-text">"Love is like coding... Sometimes it shows error, but when it runs,it's magic!"</p>
+        </div> 
         <script>
             function createHeart() {
                 const heart = document.createElement("div");
@@ -155,11 +201,21 @@
               <p>🍿 PLOT TWIST:    You’ll have to find out 😉</p>
            </ul>
         <div>
+            <!-- 
+Hey there, fellow code explorer! 👀  
+You either:  
+1️⃣ Are genuinely curious about my skills (flattered, honestly 😏).  
+2️⃣ Got lost in the code and now you’re just vibing here.  
+3️⃣ Are secretly judging my indentation (please, have mercy).  
+Either way, you’re my kind of person. Let’s chat—about tech, life, or why semicolons are a necessary evil. 💻🔥  
+ If you reply to this… I’ll know you’re really cool Or just really bored.
+  Either way, I respect it. 😆 
+-->
             <h3>My Ideal Partner Should Have</h3>
             <p>✅ Front-End: Good sense of humor, sweet personality, enjoys late-night coding sessions & great communication</p>
             <p>✅ Back-End: Trust , loyalty & deep convos.</p>
             <p>✅ Database: Strong emotional connection, can understand my sarcastic comments and can handle my kaleshi mood swing.</p>
-        </div>
+        </div>  
         <div class="playlist">
             <h3>🎶 My Dream Valentine's Day Playlist 💖</h3>
             <div class="song-list">
@@ -224,16 +280,6 @@
             </script> 
         </div>
         <a href="#" class="btn" id="connect-btn">Let's Connect 💌</a>
- <!-- 
-Hey there, fellow code explorer! 👀  
-You either:  
-1️⃣ Are genuinely curious about my skills (flattered, honestly 😏).  
-2️⃣ Got lost in the code and now you’re just vibing here.  
-3️⃣ Are secretly judging my indentation (please, have mercy).  
-Either way, you’re my kind of person. Let’s chat—about tech, life, or why semicolons are a necessary evil. 💻🔥  
- If you reply to this… I’ll know you’re really cool Or just really bored.
-  Either way, I respect it. 😆 
--->
         <style>
             .firework {
                 position: fixed;
